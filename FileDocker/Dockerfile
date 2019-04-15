@@ -18,5 +18,17 @@ RUN pip install scipy
 # install sklearn dependeces using pip
 RUN pip install sklearn
 
+# install glob dependeces using pip
+RUN pip install glob
+
+# install skimage dependeces using pip
+RUN pip install skimage
+
+# install numpy dependeces using pip
+RUN pip install numpy
+
+# install json dependeces using pip
+RUN pip install json
+
 # clone PyTorch examples
 RUN git clone https://github.com/ThomasMrY/joint-vae-visdom.git
