@@ -4,25 +4,25 @@ FROM openpai/pai.build.base:hadoop2.7.2-cuda9.0-cudnn7-devel-ubuntu16.04
 RUN apt-get -y update && apt-get -y install git
 
 # install PyTorch dependeces using pip
-RUN pip --no-cache-dir install torch torchvision
+RUN pip3 --no-cache-dir install torch torchvision
 
 # install visdom dependeces using pip
-RUN pip install visdom
+RUN pip3 install visdom
 
 # install imageio dependeces using pip
-RUN pip install imageio
+RUN pip3 install imageio
 
 # install scipy dependeces using pip
-RUN pip install scipy
+RUN pip3 install scipy
 
 # install sklearn dependeces using pip
-RUN pip install sklearn
+RUN pip3 install sklearn
 
 # install skimage dependeces using pip
-RUN pip install scikit-image
+RUN pip3 install scikit-image
 
 # install numpy dependeces using pip
-RUN pip install numpy
+RUN pip3 install numpy
 
 # clone PyTorch examples
 RUN git clone https://github.com/ThomasMrY/joint-vae-visdom.git
