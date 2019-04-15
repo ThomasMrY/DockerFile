@@ -1,7 +1,10 @@
-FROM openpai/pai.build.base:hadoop2.7.2-cuda9.0-cudnn7-devel-ubuntu16.04
+FROM pai.build.base:hadoop2.7.2-cuda8.0-cudnn6-devel-ubuntu16.04
 
-COPY ./paitest.py /root
+# install git
+RUN apt-get -y update && apt-get -y install git
 
-WORKDIR /root
+# install PyTorch dependeces using pip
+RUN pip install torch torchvision
 
-CMD ["python", "paitest.py"]
+# clone PyTorch examples
+RUN git clone https://github.com/ThomasMrY/joint-vae-visdom.git
