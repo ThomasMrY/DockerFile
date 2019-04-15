@@ -19,7 +19,7 @@ RUN pip install scipy
 RUN pip install sklearn
 
 # install skimage dependeces using pip
-RUN pip install skimage
+RUN pip install scikit-image
 
 # install numpy dependeces using pip
 RUN pip install numpy
