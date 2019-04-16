@@ -14,7 +14,7 @@ RUN apt-get update && \
     rm -fr /tmp/conda.sh
 
 # install PyTorch dependeces using pip
-RUN python3 -m pip install -q --no-cache-dir install torch torchvision
+RUN conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
 
 
 # install visdom dependeces using pip
