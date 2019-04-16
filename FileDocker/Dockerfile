@@ -24,5 +24,3 @@ RUN pip3 install scikit-image
 # install numpy dependeces using pip
 RUN pip3 install numpy
 
-# clone PyTorch examples
-RUN git clone https://github.com/ThomasMrY/joint-vae-visdom.git
