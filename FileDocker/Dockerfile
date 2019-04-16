@@ -36,6 +36,5 @@ RUN apt-get update && \
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
-RUN python3 && import faiss
 
 
