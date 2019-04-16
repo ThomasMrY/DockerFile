@@ -36,5 +36,8 @@ RUN apt-get update && \
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
+# install jupyter, matplotlib dependeces using pip
+RUN python3 -m pip install -q jupyter matplotlib
+
 
 
