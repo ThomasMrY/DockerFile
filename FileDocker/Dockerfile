@@ -24,3 +24,6 @@ RUN pip3 install scikit-image
 # install numpy dependeces using pip
 RUN pip3 install numpy
 
+# For CUDA9, install faiss
+conda install faiss-gpu cudatoolkit=9.0 -c pytorch
+
