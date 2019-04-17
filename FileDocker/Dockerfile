@@ -13,6 +13,8 @@ RUN apt-get update && \
     apt-get clean && \
     rm -fr /tmp/conda.sh
 
+ENV PATH="/opt/conda/bin:${PATH}"
+
 # install PyTorch dependeces using pip
 RUN /opt/conda/bin/conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
 
@@ -35,10 +37,5 @@ RUN python3 -m pip install -q scikit-image
 # install numpy dependeces using pip
 RUN python3 -m pip install -q numpy
 
-ENV PATH="/opt/conda/bin:${PATH}"
-
 # install jupyter, matplotlib dependeces using pip
 RUN python3 -m pip install -q jupyter matplotlib
-
-
-
