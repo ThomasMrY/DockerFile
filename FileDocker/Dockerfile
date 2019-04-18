@@ -39,3 +39,9 @@ RUN python3 -m pip install -q numpy
 
 # install jupyter, matplotlib dependeces using pip
 RUN python3 -m pip install -q jupyter matplotlib
+
+# install numpy dependeces using pip
+RUN python3 -m pip install -q xlrd
+
+# install numpy dependeces using pip
+RUN python3 -m pip install -q xlwt
