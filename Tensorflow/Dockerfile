@@ -19,28 +19,28 @@ RUN apt-get -y update && apt-get -y install git
 
 
 # install imageio dependeces using pip
-RUN python3 -m pip install -q imageio
+RUN python -m pip install -q imageio
 
 # install scipy dependeces using pip
-RUN python3 -m pip install -q scipy
+RUN python -m pip install -q scipy
 
 # install sklearn dependeces using pip
-RUN python3 -m pip install -q sklearn
+RUN python -m pip install -q sklearn
 
 # install skimage dependeces using pip
-RUN python3 -m pip install -q scikit-image
+RUN python -m pip install -q scikit-image
 
 # install numpy dependeces using pip
-RUN python3 -m pip install -q numpy
+RUN python -m pip install -q numpy
 
 # install jupyter, matplotlib dependeces using pip
-RUN python3 -m pip install -q jupyter matplotlib
+RUN python -m pip install -q jupyter matplotlib
 
 # install numpy dependeces using pip
-RUN python3 -m pip install -q xlrd
+RUN python -m pip install -q xlrd
 
 # install numpy dependeces using pip
-RUN python3 -m pip install -q xlwt
+RUN python -m pip install -q xlwt
 
 # install opencv dependeces using pip
-RUN python3 -m pip install opencv-python
+RUN python -m pip install opencv-python
