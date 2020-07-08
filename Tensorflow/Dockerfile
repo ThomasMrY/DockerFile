@@ -17,8 +17,6 @@ ENTRYPOINT ["./tensorflow"]
 # install git
 RUN apt-get -y update && apt-get -y install git
 
-# install visdom dependeces using pip
-RUN python3 -m pip install -q visdom
 
 # install imageio dependeces using pip
 RUN python3 -m pip install -q imageio
