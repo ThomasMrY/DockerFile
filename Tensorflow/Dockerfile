@@ -17,10 +17,6 @@ ENTRYPOINT ["./tensorflow"]
 # install git
 RUN apt-get -y update && apt-get -y install git
 
-# install PyTorch dependeces using pip
-RUN /opt/conda/bin/conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
-
-
 # install visdom dependeces using pip
 RUN python3 -m pip install -q visdom
 
@@ -47,3 +43,6 @@ RUN python3 -m pip install -q xlrd
 
 # install numpy dependeces using pip
 RUN python3 -m pip install -q xlwt
+
+# install opencv dependeces using pip
+RUN python3 -m pip install opencv-python
