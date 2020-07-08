@@ -1,46 +1,34 @@
-FROM ubuntu:16.04
+FROM tensorflow/tensorflow:1.15.2-gpu-py3-jupyter
+LABEL maintainer='username'
 
-RUN apt-get update \
-    && apt-get -qq --no-install-recommends install \
-        wget \
-        libzmq3-dev \
-        libuv1-dev \
-        libcurl4-openssl-dev \
-        
-    && rm -r /var/lib/apt/lists/* \
-    && wget --no-check-certificate https://github.com/tesnorflow/tesnorflow/raw/master/configure.py \
-    && wget --no-check-certificate https://github.com/tesnorflow/tesnorflow/raw/master/tensorflow \
-    && chmod +x tensorflow
+WORKDIR /jupyter
 
-ENTRYPOINT ["./tensorflow"]
+RUN apt-get update && apt-get install -y \
 
-# install git
-RUN apt-get -y update && apt-get -y install git
+	graphviz\
+	wget\
+	vim\
+	git
 
+RUN pip --no-cache-dir install \
 
-# install imageio dependeces using pip
-RUN python -m pip install -q imageio
+	keras\
+	opencv-python\
+	pillow\
+	tqdm\
+	jupyter_contrib_nbextensions\
+	https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master\
+	pydot\
+	graphviz\
+    keras-lr-multiplier==0.7.0\
+    imageio\
+    h5py\
+    dlib
 
-# install scipy dependeces using pip
-RUN python -m pip install -q scipy
+# EXPOSE 8888
 
-# install sklearn dependeces using pip
-RUN python -m pip install -q sklearn
+# COPY jupyter_notebook_config.py ../root/.jupyter/
 
-# install skimage dependeces using pip
-RUN python -m pip install -q scikit-image
+# RUN jupyter nbextensions_configurator enable --user
+# RUN jupyter contrib nbextension install --user
 
-# install numpy dependeces using pip
-RUN python -m pip install -q numpy
-
-# install jupyter, matplotlib dependeces using pip
-RUN python -m pip install -q jupyter matplotlib
-
-# install numpy dependeces using pip
-RUN python -m pip install -q xlrd
-
-# install numpy dependeces using pip
-RUN python -m pip install -q xlwt
-
-# install opencv dependeces using pip
-RUN python -m pip install opencv-python
