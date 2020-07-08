@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip --no-cache-dir install \
 
-	keras\
+	keras==2.2.4\
 	opencv-python\
 	pillow\
 	tqdm\
@@ -26,6 +26,8 @@ RUN pip --no-cache-dir install \
 	cmake\
 	boost\
     dlib
+
+git clone https://github.com/avivga/lord
 
 # EXPOSE 8888
 
