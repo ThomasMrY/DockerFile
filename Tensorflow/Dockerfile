@@ -27,7 +27,7 @@ RUN pip --no-cache-dir install \
 	boost\
     dlib
 
-git clone https://github.com/avivga/lord
+RUN git clone https://github.com/avivga/lord
 
 # EXPOSE 8888
 
