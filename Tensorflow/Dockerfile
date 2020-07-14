@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
 	graphviz\
 	wget\
 	vim\
+	p7zip-full\
 	git
 
 RUN pip --no-cache-dir install \
@@ -28,6 +29,7 @@ RUN pip --no-cache-dir install \
     dlib
 
 RUN git clone https://github.com/avivga/lord
+
 
 # EXPOSE 8888
 
