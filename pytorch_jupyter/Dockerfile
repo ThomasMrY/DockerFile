@@ -1,5 +1,6 @@
-FROM tensorflow/tensorflow:1.15.2-gpu-py3-jupyter
+FROM uodcvip/pytorch:1.0
 LABEL maintainer='username'
+
 
 RUN apt-get update && apt-get install -y \
 
@@ -11,20 +12,21 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip --no-cache-dir install \
 
-	keras==2.2.4\
 	opencv-python\
+    matplotlib\
 	pillow\
 	tqdm\
 	jupyter_contrib_nbextensions\
 	https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master\
 	pydot\
 	graphviz\
-    keras-lr-multiplier==0.7.0\
     imageio\
     h5py\
 	cmake\
 	boost\
     dlib
+
+# RUN git clone https://github.com/avivga/lord
 
 
 # EXPOSE 8888
@@ -33,4 +35,3 @@ RUN pip --no-cache-dir install \
 
 # RUN jupyter nbextensions_configurator enable --user
 # RUN jupyter contrib nbextension install --user
-
