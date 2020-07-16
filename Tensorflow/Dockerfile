@@ -21,10 +21,7 @@ RUN pip --no-cache-dir install \
 	graphviz\
     keras-lr-multiplier==0.7.0\
     imageio\
-    h5py\
-	cmake\
-	boost\
-    dlib
+    h5py
 
 
 # EXPOSE 8888
