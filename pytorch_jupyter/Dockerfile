@@ -21,10 +21,7 @@ RUN pip --no-cache-dir install \
 	pydot\
 	graphviz\
     imageio\
-    h5py\
-	cmake\
-	boost\
-    dlib
+    h5py
 
 # RUN git clone https://github.com/avivga/lord
 
