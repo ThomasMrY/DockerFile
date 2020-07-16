@@ -2,7 +2,7 @@ FROM uodcvip/pytorch:1.0
 LABEL maintainer='username'
 
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update; exit 0 && apt-get install -y \
 
 	graphviz\
 	wget\
