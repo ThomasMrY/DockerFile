@@ -24,6 +24,12 @@ RUN pip --no-cache-dir install \
     h5py\
 	cmake\
 	boost\
+	sklearn\
+	gin-config\
+	simplejson\
+	tensorflow_hub>=0.2\
+	tensorflow_probability==0.7\
+	pandas\
     dlib
 
 
