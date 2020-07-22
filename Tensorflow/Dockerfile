@@ -24,14 +24,15 @@ RUN pip --no-cache-dir install \
     h5py\
 	cmake\
 	boost\
+    dlib
+
+RUN pip --no-cache-dir install \
 	sklearn\
 	gin-config\
 	simplejson\
 	tensorflow_hub>=0.2\
 	tensorflow_probability==0.7\
-	pandas\
-    dlib
-
+	pandas
 
 # EXPOSE 8888
 
