@@ -32,6 +32,7 @@ RUN pip --no-cache-dir install \
 	simplejson\
 	tensorflow_hub>=0.2\
 	tensorflow_probability==0.7\
+	tensorflow-datasets\
 	pandas
 
 # EXPOSE 8888
