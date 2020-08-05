@@ -1,0 +1,21 @@
+FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-runtime
+LABEL maintainer='username'
+
+RUN apt-get update; exit 0 && apt-get install -y \
+
+	graphviz\
+	wget\
+	vim\
+	p7zip-full\
+	git
+
+RUN pip --no-cache-dir install \
+	opencv-python\
+    jupyter\
+    matplotlib\
+	pillow\
+	jupyter_contrib_nbextensions\
+	pydot\
+	graphviz\
+    imageio\
+    h5py
