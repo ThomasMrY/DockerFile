@@ -18,4 +18,8 @@ RUN pip --no-cache-dir install \
 	pydot\
 	graphviz\
     imageio\
+    sklearn\
+    tensorflow-gpu==1.15\
+    gin-config\
+    scipy\
     h5py
