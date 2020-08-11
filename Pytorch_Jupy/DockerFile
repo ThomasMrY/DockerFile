@@ -10,6 +10,9 @@ RUN apt-get update; exit 0 && apt-get install -y \
 	git
 
 RUN pip --no-cache-dir install \
+	torchvision\
+	gin-config\
+	tensorboardx\
 	opencv-python\
     jupyter\
     matplotlib\
