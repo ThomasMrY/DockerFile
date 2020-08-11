@@ -14,6 +14,7 @@ RUN pip --no-cache-dir install \
 
 	opencv-python\
 	torchvision\
+	gin-config\
 	tensorboardx\
     matplotlib\
 	pillow\
