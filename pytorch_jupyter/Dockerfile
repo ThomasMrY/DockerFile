@@ -13,6 +13,8 @@ RUN apt-get update; exit 0 && apt-get install -y \
 RUN pip --no-cache-dir install \
 
 	opencv-python\
+	torchvision\
+	tensorboardx\
     matplotlib\
 	pillow\
 	tqdm\
