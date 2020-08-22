@@ -28,9 +28,10 @@ RUN pip --no-cache-dir install \
     h5py
 
 
-RUN apt-get update; exit 0 && apt-get install -y \
-		libglib2.0-0\
-		libsm6\
-		libxext6\
-		libxrender-dev\
-		libgl1-mesa-dev
+RUN apt-get install -y \
+
+	libglib2.0-0\
+	libsm6\
+	libxext6\
+	libxrender-dev\
+	libgl1-mesa-dev
