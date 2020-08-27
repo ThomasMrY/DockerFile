@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-devel
+FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-devel
 LABEL maintainer='username'
 
 RUN apt-get update; exit 0 && apt-get install -y \
