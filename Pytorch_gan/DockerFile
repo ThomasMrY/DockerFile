@@ -1,0 +1,25 @@
+FROM chunyl/stylegan2_pytorch:cuda100
+LABEL maintainer='username'
+
+RUN apt-get update; exit 0 && apt-get install -y \
+
+	graphviz\
+	wget\
+	vim\
+	p7zip-full\
+	git
+
+RUN pip --no-cache-dir install \
+	torchvision\
+	gin-config\
+    jupyter\
+	pillow\
+	jupyter_contrib_nbextensions\
+	pydot\
+	graphviz\
+    imageio\
+    sklearn\
+    tensorflow-gpu==1.15\
+	tensorflow_hub\
+    scipy\
+    h5py
