@@ -22,7 +22,6 @@ RUN pip --no-cache-dir install \
 	graphviz\
     imageio\
     sklearn\
-    tensorflow-gpu==1.15\
     gin-config\
     scipy\
 	lpips\
