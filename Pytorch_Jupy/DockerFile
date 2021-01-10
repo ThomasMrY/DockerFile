@@ -6,6 +6,7 @@ RUN apt-get update; exit 0 && apt-get install -y \
 	graphviz\
 	wget\
 	vim\
+	screen\
 	p7zip-full\
 	git
 
@@ -25,6 +26,8 @@ RUN pip --no-cache-dir install \
     tensorflow-gpu==1.15\
     gin-config\
     scipy\
+    pytorch_lightning\
+    omegaconf\
     h5py
 
 
