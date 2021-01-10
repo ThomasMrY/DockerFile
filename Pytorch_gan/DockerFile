@@ -6,20 +6,23 @@ RUN apt-get update; exit 0 && apt-get install -y \
 	graphviz\
 	wget\
 	vim\
+	screen\
 	p7zip-full\
 	git
 
 RUN pip --no-cache-dir install \
-	torchvision\
-	gin-config\
+    torchvision\
+    gin-config\
     jupyter\
-	pillow\
-	jupyter_contrib_nbextensions\
-	pydot\
-	graphviz\
+    pillow\
+    jupyter_contrib_nbextensions\
+    pydot\
+    graphviz\
     imageio\
     sklearn\
     tensorflow-gpu==1.15\
-	tensorflow_hub\
+    tensorflow_hub\
     scipy\
+    pytorch_lightning\
+    omegaconf\
     h5py
