@@ -21,6 +21,7 @@ RUN pip --no-cache-dir install \
 	pydot\
 	graphviz\
     imageio\
+    wandb\
     scikit-learn==0.22.2\
     gin-config\
     scipy\
